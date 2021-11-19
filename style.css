@@ -1,0 +1,455 @@
+body{
+  margin: 0;
+}
+
+/* 전체 레이아웃*/
+#wrap{
+    width: 100vw;
+}
+
+/* ----- header, 제목, 웨이브----- */
+
+.header {
+  position:relative; background-image: url('img/배경3.jpg');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  
+}
+
+
+.logo {
+    width: auto; height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    vertical-align: middle;
+}
+
+.inner-header {
+  height:75vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+*/
+
+
+/*----- Content ,해저 -----*/
+
+.content {
+position:relative;
+height: 20000px;
+background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,43,119,1) 3%, rgba(0,43,119,1) 5%, rgba(0,22,62,1) 31%, rgba(0,16,54,1) 74%, rgba(0,0,0,1) 100%);
+overflow: hidden;
+}
+
+/* 손전등효과
+.content { 
+cursor: none;
+--cursorXPos: 100vw;
+--cursorYPos: 25000px;
+ 
+}
+
+.content:before{
+  content:"";
+  width:100%;
+  height:100%;
+  position: absolute;
+  background: radial-gradient(
+    circle 8rem at var(--cursorXPos) var(--cursorYPos),
+    rgba(0,0,0,0)0%,
+    rgba(0,0,0,0.96)100%
+  );
+  z-index:10;
+}
+*/
+
+
+
+/* 절벽 */
+.cliff-1{
+  position:absolute;
+  right:0;
+  top: 18%; 
+  margin: 0; 
+  overflow: hidden;
+  display: block;
+}
+.cliff-2{
+  position:absolute;
+  left: 0%; 
+  top: 57.5%; 
+  margin: 0; 
+  overflow: hidden; 
+  display: block;
+}
+
+
+
+/* 물고기1_ petfish */
+.content1{
+  position:absolute; 
+  top:10%;
+  width: 100%; height:7%; overflow: visible;
+}
+/* 물고기2_ jellyfish */
+.content2{
+  position:absolute; 
+  top: 17%;
+  width: 100%; height:7%; overflow: visible;
+}
+/* 물고기3_ raxfish */
+.content3{
+  position:absolute; 
+  top:24%;
+  width: 100%; height:7%; overflow: visible;
+}
+/* 물고기4_ strawfish */
+.content4{
+  position:absolute; 
+  top: 31%;
+  width: 100%; height: 7%; overflow: visible;  
+}
+/* 물고기5_ yogutfish */
+.content5{
+  position:absolute; 
+  top:38%;
+  width: 100%; height: 7%; overflow: visible;
+}
+/* 물고기6_ greenfish */
+.content6{
+  position:absolute; 
+  top: 45%;
+  width: 100%; height: 7%; overflow: visible;
+}
+/* 물고기7_ neonsquid */
+.content7{
+  position:absolute; 
+  top: 52%;
+  width: 100%; height: 13%; overflow: visible; 
+}
+/* 물고기8_ devilturtle */
+.content8{
+  position:absolute; 
+  top: 65%;
+  width: 100%; height: 12%; overflow: hidden;
+ 
+}
+/* footer, 아틀란티스 성 */
+.footer{
+  position:absolute; 
+  top: 77%;
+  width: 100%; height: 23%; overflow: hidden;
+
+}
+
+/*----- hover -----*/
+
+#fish1{
+  overflow: auto;
+  padding: 10px;
+}
+#fish1:hover ~ .box1 {display:block;}
+
+#fish2{
+  overflow: auto;
+  padding: 10px;
+}
+#fish2:hover ~ .box2 {display:block;}
+
+#fish3{
+  overflow: auto;
+  padding: 10px;
+}
+#fish3:hover ~ .box3 {display:block;}
+
+#fish4{
+  overflow: auto;
+  padding: 10px;
+}
+#fish4:hover ~ .box4 {display:block;}
+
+#fish5{
+  overflow: auto;
+  padding: 10px;
+}
+#fish5:hover ~ .box5 {display:block;}
+
+#fish6{
+  overflow: auto;
+  padding: 10px;
+}
+#fish6:hover ~ .box6 {display:block;}
+
+#fish7{
+  overflow: auto;
+  padding: 10px;
+}
+#fish7:hover ~ .box7{display:block;}
+
+#fish8{
+  overflow: auto;
+  padding: 10px;
+}
+#fish8:hover ~ .box8{display:block;}
+
+
+
+
+
+/*----- explain box -----*/
+
+p{line-height:18px;}
+
+.box h1{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800; 
+  font-size: 33px; 
+  color: white;
+  margin-bottom: 30px; 
+  text-align: center;
+}
+
+.box p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 20px; 
+  color: white; 
+  text-align: center; 
+  line-height: 35px;
+}
+
+
+/* 물고기1 _ petfish 설명 */
+.box1{
+  display:none;
+  position:absolute; 
+  top: 20%; 
+  left:65%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+/* 물고기2 _ jellyfish 설명 */
+.box2{
+  display:none;
+  position:absolute; 
+  top: 23%; 
+  left: 10%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+/* 물고기3_ raxfish 설명 */
+.box3{
+  display:none;
+  position:absolute; 
+  top: 50%; 
+  left: 10%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+/* 물고기4_ strawfish 설명 */
+.box4{
+  display:none;
+  position:absolute; 
+  top: 40%; 
+  left: 50%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+}
+/* 물고기5_ yogutfish 설명 */
+.box5{
+  display:none;
+  position:absolute; 
+  top: 47%; 
+  left: 37%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+/* 물고기6 _ greenfish 설명 */
+.box6{
+  display:none;
+  position:absolute; 
+  top: 75%; 
+  left: 40%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+/* 물고기7 _ neonsquid 설명 */
+.box7{
+  display:none;
+  position:absolute; 
+  top:90%; 
+  left: 53%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+   padding: 10px;
+}
+/* 물고기8_ devilturtle 설명 */
+.box8{
+  display:none;
+  position:absolute; 
+  top:90%; 
+  left: 55%;
+  width:500px;
+  height:200px;
+  background-color: rgb(0,0,0,0.3);
+  color:white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/*---------bubble---------*/
+
+.bubble{
+  position:absolute;
+  width:3em;
+  height:3em;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+  background: radial-gradient(ellipse at center,  rgb(89, 0, 255) 0%,rgba(255,255,255,0) 90%);
+  opacity: 20%;
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+  overflow: visible;
+}
+.bubble:hover{
+  display:none;
+}
+
+.b1{
+  animation: floatup 10s linear infinite, sideways 5s ease-in-out infinite alternate;
+  left: 10%;
+  top:90%; 
+}
+.b2{
+  animation: floatup 5s linear infinite, sideways 4s ease-in-out 1s infinite alternate;
+  left: 15%;
+  top: 90%;
+  transform: scale(.7);
+}
+.b3{
+  animation: floatup 4s linear infinite, sideways 6s ease-in-out 6s infinite alternate;
+  left: 20%;
+  transform: scale(2);
+}
+.b4{
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 3s infinite alternate;
+  left: 25%;
+  top:90%;
+  transform: scale(.5);
+}
+.b5{
+  animation: floatup 8s linear infinite, sideways 6s ease-in-out 3s infinite alternate;
+  left: 30%;
+  top:90%;
+  transform: scale(1.1);
+}
+.b6{
+  animation: floatup 7s linear infinite, sideways 4s ease-in-out 3.5s infinite alternate;
+  left:40%;
+  top:50%;
+  transform: scale(.7);
+}
+.b7{
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 4s infinite alternate;
+  left: 90%;
+  top:90%;
+  transform: scale(.6);
+}
+
+@keyframes floatup{
+  0% {margin-top: 50%;}
+  100% {margin-top: -50%;}
+}
+@keyframes sideways{
+  0% {margin-left: 0em;}
+  100%{margin-left: 20em;}
+ 
+  
+}
+

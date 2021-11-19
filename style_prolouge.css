@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+	
+*{
+	margin: 0;
+}
+
+body{
+	background: #000000;
+	color: white;
+	box-shadow: inset -53px -41px 198px #5b379e, inset 95px -2px 200px #0a3d3b;
+	display:flex;
+	align-items:center;
+	height:100vh;
+	justify-content: center;
+}
+.typewriter {
+    font-family: 'Noto Serif KR', serif;
+	width: 30%; 
+    font-size: 10px; 
+    line-height: 2;
+    text-align: center;   
+}
+	
+h1 {
+	overflow: hidden;
+	margin: 0 auto;
+	display: inline-block;
+	font-weight: normal;
+}
+
+h1:after{
+	content: '';
+	display: inline-block;
+	background-color: white;
+	margin-left: 2px;
+	height: 25px;
+    width: 4px;
+	animation: cursor 0.4s infinite;
+	}
+
+/* The typewriter cursor effect */
+@keyframes cursor {
+	0% { opacity: 1; }
+	49% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+
+a{text-decoration:none; color: aliceblue;}
+
+
+
+
+
+/*start button*/
+
+.fade-in-box {
+	display: inline-block;
+	background-image: url('start-button.svg');
+	width: 100px;
+	height: 100px;
+	background-size: 100px;
+	background-repeat: no-repeat;
+	padding: 1px;
+	animation: fadein 80s;
+	-moz-animation: fadein 80s; 
+	-webkit-animation: fadein 80s; 
+	-o-animation: fadein 80s; 
+	position: fixed;
+	top: 60%; 
+	left: 45.5%;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0}
+			
+		to {
+		opacity: 1;}		
+}
+
+@-moz-keyframes fadein { /* Firefox */
+	from {
+		opacity: 0;}
+		
+		to {
+			opacity: 1;}
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+	from {
+		opacity: 0;}
+		
+	to {
+		opacity: 1;}
+}
+
+@-o-keyframes fadein { /* Opera */
+	from {
+		opacity: 0;}
+		  
+	to {
+		opacity: 1;}
+	
+}
+
+
+
+	
